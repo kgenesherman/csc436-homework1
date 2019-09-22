@@ -6,3 +6,5 @@ binary characters before functions removed
 clean and count - used regexes
 
 anonymous functtion call
+
+reverse for loop
