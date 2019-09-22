@@ -138,12 +138,23 @@
 	
     function cleanAndCountCharacters() {
         console.log('CLEAN AND COUNT CHARACTERS');
-	//	run();
         /*
             TODO: REMOVES ANY SPECIAL CHARACTERS FROM EACH COMPANY NAME AND
               DISPLAYS THE NUMBER OF REMAINING CHARACTERS NEXT TO THE FULL WORD.
               DONT FORGET TO REMOVE LEADING AND TRAILING WHITESPACES AS WELL
         */
+		chicagoStartups.forEach(function(item, index){
+			item = item.trim();
+			item = item.replace(/[^a-zA-Z' ']/g, "");
+			console.log(item);
+			// get rid of multiple spaces
+			//https://stackoverflow.com/questions/6163169/replace-multiple-whitespaces-with-single-whitespace-in-javascript-string
+			item = item.replace(/^(\s*)|(\s*)$/g, '').replace(/\s+/g, ' ');
+			var len = item.split(' ').length;
+			console.log(len);
+			chicagoStartups[index] = item + ' ' + len;
+		});
+		initDocument();
     }
 	
     function initReverse() {
