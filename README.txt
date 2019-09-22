@@ -4,3 +4,5 @@ Original index.html
 binary characters before functions removed
 
 clean and count - used regexes
+
+anonymous functtion call

@@ -1,3 +1,4 @@
+<!-- https://github.com/kgenesherman/csc436-homework1   -->
 <!DOCTYPE html>
 <html>
     <h3>Javascript Basics</h3>
@@ -138,6 +139,8 @@
 	
     function cleanAndCountCharacters() {
         console.log('CLEAN AND COUNT CHARACTERS');
+		initDocument();
+		initReverse();
         /*
             TODO: REMOVES ANY SPECIAL CHARACTERS FROM EACH COMPANY NAME AND
               DISPLAYS THE NUMBER OF REMAINING CHARACTERS NEXT TO THE FULL WORD.
@@ -146,15 +149,15 @@
 		chicagoStartups.forEach(function(item, index){
 			item = item.trim();
 			item = item.replace(/[^a-zA-Z' ']/g, "");
-			console.log(item);
 			// get rid of multiple spaces
 			//https://stackoverflow.com/questions/6163169/replace-multiple-whitespaces-with-single-whitespace-in-javascript-string
 			item = item.replace(/^(\s*)|(\s*)$/g, '').replace(/\s+/g, ' ');
 			var len = item.split(' ').length;
-			console.log(len);
+			console.log(item + len);
 			chicagoStartups[index] = item + ' ' + len;
 		});
-		initDocument();
+		//initDocument();
+		//initReverse();
     }
 	
     function initReverse() {
@@ -232,6 +235,6 @@
 ​
                         `);
         }
-        
-    });
+     // immediate call to anonymous function with ()   
+    }());
 </script>
